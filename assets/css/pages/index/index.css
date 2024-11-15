@@ -1,0 +1,72 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0.5rem;
+}
+
+.square {
+    background: #3a435d;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.o {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 500px;
+    border: 0.7rem solid #ffffff;
+}
+
+.x {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.x::before,
+.x::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 0.7rem;
+    transform-origin: center;
+    transform: rotate(45deg);
+    background: #ffffff;
+}
+
+.x::after {
+    transform: rotate(-45deg);
+}
+
+button {
+    display: none;
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background: #0071ff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
